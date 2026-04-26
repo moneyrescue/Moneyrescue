@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://moneyrescue.github.io/sitemap.xml
