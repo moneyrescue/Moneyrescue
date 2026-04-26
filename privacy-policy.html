@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — The Debt-Free Blueprint</title>
+  <meta name="description" content="Privacy policy for The Debt-Free Blueprint. Learn how we collect, use, and protect your data, including our use of Google AdSense." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://moneyrescue.github.io/privacy-policy.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- AdSense Script (replace with your Publisher ID) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a18;
+      --ink-light: #4a4a44;
+      --paper: #faf8f3;
+      --paper-dark: #f0ede3;
+      --accent: #c8440a;
+      --accent-light: #f4ece6;
+      --green: #1e6e3e;
+      --rule: #d8d4c8;
+      --serif: 'Playfair Display', Georgia, serif;
+      --body: 'Source Serif 4', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: var(--ink);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* HEADER */
+    header {
+      border-bottom: 3px double var(--rule);
+      padding: 28px 24px 20px;
+      text-align: center;
+      background: var(--paper);
+    }
+    .site-name {
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 4px;
+      text-decoration: none;
+      display: block;
+    }
+    .site-name:hover { color: var(--accent); }
+    .site-tagline { font-size: 12px; color: var(--ink-light); }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      max-width: 760px;
+      margin: 24px auto 0;
+      padding: 0 24px;
+      font-size: 12px;
+      color: var(--ink-light);
+      letter-spacing: 0.05em;
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 6px; opacity: 0.4; }
+
+    /* PAGE HERO */
+    .page-hero {
+      max-width: 760px;
+      margin: 32px auto 48px;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 32px;
+    }
+    .page-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .page-meta {
+      font-size: 13px;
+      color: var(--ink-light);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* TABLE OF CONTENTS */
+    .toc {
+      background: var(--paper-dark);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 24px 28px;
+      max-width: 760px;
+      margin: 0 auto 48px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .toc-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      columns: 2;
+      gap: 8px;
+    }
+    @media (max-width: 500px) { .toc ol { columns: 1; } }
+    .toc li {
+      counter-increment: toc;
+      padding: 4px 0;
+      font-size: 0.88rem;
+    }
+    .toc li::before {
+      content: counter(toc) ". ";
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .toc a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* MAIN CONTENT */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* SECTION */
+    .policy-section {
+      margin-bottom: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--rule);
+      scroll-margin-top: 24px;
+    }
+    .policy-section:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 .section-num {
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 2px;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 24px 0 10px;
+      color: var(--ink);
+    }
+
+    p { margin-bottom: 1.2em; color: var(--ink); }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 12px 0 16px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    li {
+      padding: 5px 0 5px 24px;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+    li::before {
+      content: '→';
+      position: absolute; left: 0;
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 0 4px 4px 0;
+      margin: 24px 0;
+    }
+    .highlight-box p { font-size: 0.92rem; margin-bottom: 0; }
+    .highlight-box strong { color: var(--accent); }
+
+    /* INFO BOX */
+    .info-box {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .info-box-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+    .info-box p { font-size: 0.9rem; }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 6px;
+      padding: 32px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .contact-box h2 {
+      color: #f0c060;
+      font-family: var(--serif);
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .contact-box p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 16px; }
+    .contact-box a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .contact-box a:hover { background: #a83508; }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+
+    /* Back to top */
+    .back-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 13px;
+      text-decoration: none;
+      margin-top: 40px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .back-top:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6rem; }
+      .toc ol { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">Legal &nbsp;·&nbsp; Privacy Policy</div>
+
+<!-- HEADER -->
+<header>
+  <a class="site-name" href="/">The Debt-Free Blueprint</a>
+  <div class="site-tagline">Evidence-based personal finance for real people</div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Home</a>
+  <span>›</span>
+  Privacy Policy
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <div class="page-meta">
+    <span>📅 Last updated: April 26, 2026</span>
+    <span>🌐 moneyrescue.github.io</span>
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc" style="max-width:760px; margin: 0 auto 48px; padding: 24px 28px;">
+  <div class="toc-title">Contents</div>
+  <ol>
+    <li><a href="#information">Information We Collect</a></li>
+    <li><a href="#cookies">Cookies & Tracking</a></li>
+    <li><a href="#adsense">Google AdSense</a></li>
+    <li><a href="#analytics">Google Analytics</a></li>
+    <li><a href="#third-party">Third-Party Links</a></li>
+    <li><a href="#data-use">How We Use Your Data</a></li>
+    <li><a href="#your-rights">Your Rights</a></li>
+    <li><a href="#children">Children's Privacy</a></li>
+    <li><a href="#changes">Policy Changes</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ol>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="highlight-box">
+    <p><strong>Plain English summary:</strong> We don't sell your personal data. We use Google AdSense to show ads and Google Analytics to understand traffic. Both use cookies. You can opt out at any time.</p>
+  </div>
+
+  <!-- 1 -->
+  <div class="policy-section" id="information">
+    <h2><span class="section-num">01</span> Information We Collect</h2>
+    <p>
+      When you visit <strong>moneyrescue.github.io</strong> ("the Site"), we may collect the following types of information:
+    </p>
+    <h3>Information You Provide</h3>
+    <ul>
+      <li>Email address, if you voluntarily subscribe to our newsletter or request a free resource</li>
+      <li>Any information you submit through contact forms</li>
+    </ul>
+    <h3>Information Collected Automatically</h3>
+    <ul>
+      <li>IP address and approximate geographic location</li>
+      <li>Browser type, operating system, and device type</li>
+      <li>Pages visited, time on page, and referring URLs</li>
+      <li>Clicks on advertisements displayed on the Site</li>
+    </ul>
+    <p>
+      This information is collected through cookies and third-party analytics tools described below.
+    </p>
+  </div>
+
+  <!-- 2 -->
+  <div class="policy-section" id="cookies">
+    <h2><span class="section-num">02</span> Cookies &amp; Tracking Technologies</h2>
+    <p>
+      Cookies are small text files stored on your device. We use cookies to improve your experience and serve relevant advertisements. The Site uses the following types:
+    </p>
+    <ul>
+      <li><strong>Essential cookies</strong> — Required for the site to function correctly</li>
+      <li><strong>Analytics cookies</strong> — Used to understand how visitors interact with the site (via Google Analytics)</li>
+      <li><strong>Advertising cookies</strong> — Used to serve personalized ads based on your interests (via Google AdSense)</li>
+    </ul>
+    <p>
+      You can control or disable cookies through your browser settings at any time. Note that disabling cookies may affect site functionality and ad personalization.
+    </p>
+    <div class="info-box">
+      <div class="info-box-title">How to manage cookies in your browser</div>
+      <p>Visit your browser's Help section and search "manage cookies" — or go directly to: Chrome Settings → Privacy & Security → Cookies. Similar options exist in Firefox, Safari, and Edge.</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="policy-section" id="adsense">
+    <h2><span class="section-num">03</span> Google AdSense</h2>
+    <p>
+      This Site uses <strong>Google AdSense</strong> to display advertisements. Google AdSense is operated by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
+    </p>
+    <p>
+      Google AdSense uses cookies and web beacons to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this site and/or other sites on the internet.
+    </p>
+    <ul>
+      <li>Google may use the DoubleClick cookie to serve interest-based ads</li>
+      <li>Third-party vendors may also use cookies to serve ads on this site</li>
+      <li>Ad serving is subject to Google's advertising policies</li>
+    </ul>
+    <div class="highlight-box">
+      <p>
+        <strong>Opt out of personalized ads:</strong> You can opt out of Google's use of cookies for personalized advertising by visiting
+        <strong>google.com/settings/ads</strong> or by visiting <strong>aboutads.info</strong>.
+      </p>
+    </div>
+    <p>
+      For more information on how Google uses data from sites that use its services, visit:
+      <strong>policies.google.com/technologies/partner-sites</strong>
+    </p>
+  </div>
+
+  <!-- 4 -->
+  <div class="policy-section" id="analytics">
+    <h2><span class="section-num">04</span> Google Analytics</h2>
+    <p>
+      We use <strong>Google Analytics</strong> to understand how visitors use the Site. Google Analytics collects information such as how often users visit, what pages they visit, and what other sites they used prior to arriving here.
+    </p>
+    <ul>
+      <li>We use this data only to improve the Site's content and user experience</li>
+      <li>Google Analytics data is anonymized where possible</li>
+      <li>We do not combine Analytics data with personally identifiable information</li>
+    </ul>
+    <p>
+      You can opt out of Google Analytics by installing the
+      <strong>Google Analytics Opt-out Browser Add-on</strong> available at tools.google.com/dlpage/gaoptout.
+    </p>
+  </div>
+
+  <!-- 5 -->
+  <div class="policy-section" id="third-party">
+    <h2><span class="section-num">05</span> Third-Party Links</h2>
+    <p>
+      The Site may contain links to external websites, including affiliate links to financial products and services. We are not responsible for the privacy practices or content of those sites.
+    </p>
+    <p>
+      Some links on this site may be affiliate links, meaning we may earn a commission if you click and make a purchase. This does not affect the price you pay or our editorial independence.
+    </p>
+    <div class="info-box">
+      <div class="info-box-title">Affiliate Disclosure</div>
+      <p>In accordance with FTC guidelines, we disclose that some links on this site are affiliate links. We only recommend products and services we believe provide genuine value to our readers.</p>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="policy-section" id="data-use">
+    <h2><span class="section-num">06</span> How We Use Your Data</h2>
+    <p>Data collected through this Site is used for the following purposes:</p>
+    <ul>
+      <li>To deliver and improve the Site's content</li>
+      <li>To serve relevant advertisements via Google AdSense</li>
+      <li>To analyze site traffic and user behavior via Google Analytics</li>
+      <li>To send newsletters or resources if you've opted in by email</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>
+      We do <strong>not</strong> sell, rent, or trade your personal information to third parties for their marketing purposes.
+    </p>
+  </div>
+
+  <!-- 7 -->
+  <div class="policy-section" id="your-rights">
+    <h2><span class="section-num">07</span> Your Rights</h2>
+    <p>
+      Depending on your location, you may have the following rights regarding your personal data:
+    </p>
+    <ul>
+      <li><strong>Access</strong> — Request a copy of the data we hold about you</li>
+      <li><strong>Correction</strong> — Request correction of inaccurate data</li>
+      <li><strong>Deletion</strong> — Request deletion of your personal data</li>
+      <li><strong>Opt-out</strong> — Unsubscribe from emails at any time via the unsubscribe link</li>
+      <li><strong>Data portability</strong> — Request your data in a portable format</li>
+    </ul>
+    <p>
+      California residents have additional rights under the CCPA. EU/UK residents have rights under GDPR. To exercise any of these rights, contact us using the details below.
+    </p>
+  </div>
+
+  <!-- 8 -->
+  <div class="policy-section" id="children">
+    <h2><span class="section-num">08</span> Children's Privacy</h2>
+    <p>
+      This Site is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately and we will delete it.
+    </p>
+  </div>
+
+  <!-- 9 -->
+  <div class="policy-section" id="changes">
+    <h2><span class="section-num">09</span> Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this policy periodically.
+    </p>
+    <p>
+      Continued use of the Site after any changes constitutes your acceptance of the updated policy.
+    </p>
+  </div>
+
+  <!-- 10 CONTACT -->
+  <div class="policy-section" id="contact">
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <p>Questions about this Privacy Policy? We're happy to help.</p>
+      <a href="mailto:hello@moneyrescue.com">hello@moneyrescue.com</a>
+      <p style="margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.5);">
+        The Debt-Free Blueprint &nbsp;·&nbsp; moneyrescue.github.io
+      </p>
+    </div>
+  </div>
+
+  <a href="#" class="back-top">↑ Back to top</a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Disclaimer</a>
+  </div>
+  <p>© 2026 The Debt-Free Blueprint. For informational purposes only — not financial advice.</p>
+</footer>
+
+</body>
+</html>
