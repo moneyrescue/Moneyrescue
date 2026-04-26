@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>50/30/20 Budget Rule: Calculator + Complete Guide (2026)</title>
+  <meta name="description" content="The 50/30/20 budget rule explained. Use our free calculator to split your income into needs, wants, and savings — and find extra money for debt payoff." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://moneyrescue.github.io/50-30-20-budget.html" />
+  <meta property="og:title" content="50/30/20 Budget Calculator — Find Your Perfect Budget Split" />
+  <meta property="og:description" content="Free 50/30/20 budget calculator. Enter your income and see exactly how to allocate your money." />
+  <meta property="og:type" content="website" />
+
+  <!-- AdSense (replace with your ID) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a18; --ink-light: #4a4a44; --paper: #faf8f3; --paper-dark: #f0ede3;
+      --accent: #c8440a; --accent-light: #f4ece6; --green: #1e6e3e; --green-light: #e8f4ee;
+      --blue: #1a4e8a; --blue-light: #e8eef8; --rule: #d8d4c8;
+      --serif: 'Playfair Display', Georgia, serif; --body: 'Source Serif 4', Georgia, serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--body); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.75; }
+
+    .topbar { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 8px 16px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .topbar span { color: #f0c060; }
+    header { border-bottom: 3px double var(--rule); padding: 24px; text-align: center; }
+    .site-name { font-family: var(--serif); font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; display: block; margin-bottom: 3px; }
+    .site-name:hover { color: var(--accent); }
+    .site-tagline { font-size: 12px; color: var(--ink-light); }
+    nav { background: var(--paper-dark); border-bottom: 1px solid var(--rule); padding: 10px 24px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: var(--ink-light); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
+
+    /* HERO */
+    .hero { max-width: 860px; margin: 48px auto 0; padding: 0 24px; }
+    .hero-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+    h1 { font-family: var(--serif); font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 18px; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub { font-size: 1.05rem; color: var(--ink-light); max-width: 580px; margin-bottom: 20px; }
+    .byline { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-light); padding: 14px 0; border-top: 1px solid var(--rule); margin-bottom: 36px; }
+    .byline-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--paper-dark); border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 700; color: var(--ink-light); font-size: 13px; flex-shrink: 0; }
+
+    /* AD */
+    .ad-slot { background: var(--paper-dark); border: 1px dashed var(--rule); border-radius: 4px; padding: 16px; text-align: center; margin: 32px auto; max-width: 860px; }
+    .ad-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-light); opacity: 0.5; margin-bottom: 8px; }
+    .ad-ph { width: 100%; max-width: 728px; height: 90px; background: linear-gradient(90deg,#e8e4da,#d8d4c8,#e8e4da); background-size: 200%; animation: shimmer 2s infinite; border-radius: 2px; margin: 0 auto; }
+    .ad-ph.rect { max-width: 300px; height: 250px; }
+    @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+
+    /* MAIN LAYOUT */
+    .main-wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start; }
+    @media(max-width:860px){ .main-wrap { grid-template-columns: 1fr; } }
+
+    /* CALCULATOR */
+    .calc-card { background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 32px; margin-bottom: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .calc-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-subtitle { font-size: 0.88rem; color: var(--ink-light); margin-bottom: 20px; }
+    .income-row { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; margin-bottom: 16px; }
+    .field-wrap { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 140px; }
+    .field-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); font-weight: 600; }
+    .field-input { padding: 10px 14px; border: 1px solid var(--rule); border-radius: 4px; font-family: var(--body); font-size: 1rem; background: var(--paper); color: var(--ink); transition: border-color 0.2s; }
+    .field-input:focus { outline: none; border-color: var(--accent); }
+    .period-toggle { display: flex; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+    .period-btn { flex: 1; padding: 10px 12px; background: none; border: none; cursor: pointer; font-family: var(--body); font-size: 0.85rem; color: var(--ink-light); transition: all 0.2s; }
+    .period-btn.active { background: var(--ink); color: #fff; }
+    .btn-calc { width: 100%; padding: 14px; background: var(--accent); color: #fff; border: none; border-radius: 6px; font-family: var(--serif); font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s; margin-top: 12px; }
+    .btn-calc:hover { background: #a83508; }
+
+    /* DONUT CHART */
+    .donut-wrap { display: flex; align-items: center; justify-content: center; gap: 32px; margin: 28px 0; flex-wrap: wrap; }
+    .donut-svg { width: 180px; height: 180px; flex-shrink: 0; }
+    .donut-legend { display: flex; flex-direction: column; gap: 12px; }
+    .legend-item { display: flex; align-items: center; gap: 10px; }
+    .legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+    .legend-label { font-size: 0.88rem; }
+    .legend-label strong { display: block; font-family: var(--serif); font-size: 1.1rem; }
+
+    /* BUCKETS */
+    .buckets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+    @media(max-width:500px){ .buckets { grid-template-columns: 1fr; } }
+    .bucket { border-radius: 8px; padding: 20px; text-align: center; }
+    .bucket.needs { background: #fff3e0; border: 2px solid #e67e22; }
+    .bucket.wants { background: var(--blue-light); border: 2px solid var(--blue); }
+    .bucket.savings { background: var(--green-light); border: 2px solid var(--green); }
+    .bucket-pct { font-family: var(--serif); font-size: 2rem; font-weight: 900; display: block; }
+    .bucket.needs .bucket-pct { color: #e67e22; }
+    .bucket.wants .bucket-pct { color: var(--blue); }
+    .bucket.savings .bucket-pct { color: var(--green); }
+    .bucket-label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.8; }
+    .bucket-amount { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; margin-top: 6px; display: block; }
+
+    /* BREAKDOWN TABLE */
+    .breakdown { margin-top: 20px; }
+    .breakdown h3 { font-family: var(--serif); font-size: 1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .breakdown-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-bottom: 1px solid var(--rule); font-size: 0.88rem; }
+    .breakdown-item:nth-child(even) { background: var(--paper-dark); }
+    .breakdown-cat { display: flex; align-items: center; gap: 8px; }
+    .breakdown-icon { font-size: 1rem; }
+    .breakdown-amount { font-family: var(--serif); font-weight: 700; }
+
+    /* ARTICLE */
+    article h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 14px; padding-top: 48px; border-top: 1px solid var(--rule); color: var(--ink); }
+    article h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    article h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; margin: 24px 0 10px; }
+    article p { margin-bottom: 1.2em; }
+    article ul { list-style: none; margin: 10px 0 16px; }
+    article li { padding: 5px 0 5px 22px; position: relative; font-size: 0.95rem; }
+    article li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+
+    .highlight { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 18px 22px; border-radius: 0 4px 4px 0; margin: 20px 0; font-size: 0.95rem; }
+    .highlight strong { color: var(--accent); }
+
+    /* SIDEBAR */
+    .sidebar-widget { background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 22px; margin-bottom: 24px; }
+    .widget-title { font-family: var(--serif); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+    .related-link { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink); font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
+    .related-link:last-child { border-bottom: none; }
+    .related-link:hover { color: var(--accent); }
+    .related-link-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .tip-item { padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 0.85rem; }
+    .tip-item:last-child { border-bottom: none; }
+    .tip-item strong { display: block; font-family: var(--serif); color: var(--green); }
+
+    footer { background: var(--ink); color: rgba(255,255,255,0.5); text-align: center; padding: 28px 24px; font-size: 13px; margin-top: 60px; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">💰 <span>2026 Guide:</span> The 50/30/20 budget rule — updated for today's cost of living</div>
+
+<header>
+  <a class="site-name" href="/">The Debt-Free Blueprint</a>
+  <div class="site-tagline">Evidence-based personal finance for real people</div>
+</header>
+
+<nav>
+  <a href="/">Debt Payoff Guide</a>
+  <a href="/debt-snowball-calculator.html">Snowball Calculator</a>
+  <a href="/50-30-20-budget.html" class="active">50/30/20 Budget</a>
+  <a href="/best-balance-transfer-cards.html">Balance Transfer Cards</a>
+</nav>
+
+<div class="hero" style="max-width:860px; margin:48px auto 0; padding:0 24px;">
+  <div class="hero-label">Budgeting · Free Calculator</div>
+  <h1>The <em>50/30/20 Budget</em> Rule:<br>Calculator + Complete Guide</h1>
+  <p class="hero-sub">The simplest budgeting framework ever created. Enter your income below to see exactly how to split your money — and find room to pay off debt faster.</p>
+  <div class="byline">
+    <div class="byline-avatar">MR</div>
+    <span>Morgan Reed, CFP® &nbsp;·&nbsp; Updated April 2026 &nbsp;·&nbsp; 10 min read</span>
+  </div>
+</div>
+
+<div class="ad-slot" style="padding:20px 24px;">
+  <div class="ad-label">Advertisement</div>
+  <div class="ad-ph"></div>
+</div>
+
+<div class="main-wrap">
+  <article>
+
+    <!-- CALCULATOR -->
+    <div class="calc-card">
+      <div class="calc-title">50/30/20 Budget Calculator</div>
+      <div class="calc-subtitle">Enter your take-home pay (after taxes) to see your personalized budget breakdown.</div>
+      <div class="income-row">
+        <div class="field-wrap" style="flex:2;">
+          <label class="field-label">Take-Home Income</label>
+          <input class="field-input" id="income" type="number" placeholder="e.g. 5000" oninput="calcBudget()" />
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Period</label>
+          <div class="period-toggle">
+            <button class="period-btn active" id="btn-monthly" onclick="setPeriod('monthly')">Monthly</button>
+            <button class="period-btn" id="btn-annual" onclick="setPeriod('annual')">Annual</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="calc-output" style="display:none;">
+        <div class="buckets">
+          <div class="bucket needs">
+            <span class="bucket-pct">50%</span>
+            <div class="bucket-label">Needs</div>
+            <span class="bucket-amount" id="needs-amt">—</span>
+          </div>
+          <div class="bucket wants">
+            <span class="bucket-pct">30%</span>
+            <div class="bucket-label">Wants</div>
+            <span class="bucket-amount" id="wants-amt">—</span>
+          </div>
+          <div class="bucket savings">
+            <span class="bucket-pct">20%</span>
+            <div class="bucket-label">Savings / Debt</div>
+            <span class="bucket-amount" id="savings-amt">—</span>
+          </div>
+        </div>
+
+        <div class="donut-wrap">
+          <svg class="donut-svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#e8e4da" stroke-width="18"/>
+            <!-- Needs: 50% = 125.66 of 251.33 circumference -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#e67e22" stroke-width="18" stroke-dasharray="125.66 125.67" stroke-dashoffset="62.83" transform="rotate(-90 50 50)"/>
+            <!-- Wants: 30% -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#1a4e8a" stroke-width="18" stroke-dasharray="75.4 176.93" stroke-dashoffset="-62.83" transform="rotate(-90 50 50)"/>
+            <!-- Savings: 20% -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#1e6e3e" stroke-width="18" stroke-dasharray="50.27 201.06" stroke-dashoffset="-138.23" transform="rotate(-90 50 50)"/>
+            <text x="50" y="47" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="11" fill="#1a1a18">50/30</text>
+            <text x="50" y="58" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="11" fill="#1a1a18">/20</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#e67e22;"></div><div class="legend-label"><strong id="leg-needs">—</strong>Needs (50%)</div></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#1a4e8a;"></div><div class="legend-label"><strong id="leg-wants">—</strong>Wants (30%)</div></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#1e6e3e;"></div><div class="legend-label"><strong id="leg-savings">—</strong>Savings/Debt (20%)</div></div>
+          </div>
+        </div>
+
+        <div class="breakdown">
+          <h3>🏠 Needs — <span id="needs-lbl"></span>/mo</h3>
+          <div id="needs-breakdown"></div>
+          <h3 style="margin-top:20px;">🎬 Wants — <span id="wants-lbl"></span>/mo</h3>
+          <div id="wants-breakdown"></div>
+          <h3 style="margin-top:20px;">💰 Savings & Debt — <span id="sav-lbl"></span>/mo</h3>
+          <div id="sav-breakdown"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-slot" style="margin:0 0 32px;">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-ph rect" style="margin:0 auto;"></div>
+    </div>
+
+    <h2>What Is the 50/30/20 Rule?</h2>
+    <p>The 50/30/20 rule is a budgeting framework popularized by Senator Elizabeth Warren in her book <em>All Your Worth</em>. It divides your after-tax income into three simple categories: 50% for needs, 30% for wants, and 20% for savings and debt repayment.</p>
+    <p>Its power is simplicity. You don't need to track 40 budget categories — just three. This makes it dramatically easier to stick to than traditional envelope or zero-based budgeting systems.</p>
+
+    <div class="highlight">
+      <strong>Key insight:</strong> The 20% savings bucket is where debt payoff lives. If you're in debt, that 20% should go entirely toward eliminating debt before building savings — except for a small $1,000 emergency fund.
+    </div>
+
+    <h2>The 50% Needs Category — What Counts?</h2>
+    <p>Needs are expenses you <em>cannot</em> avoid without serious consequences. This includes:</p>
+    <ul>
+      <li>Rent or mortgage payments</li>
+      <li>Utilities (electricity, water, gas, internet)</li>
+      <li>Groceries (basic food, not dining out)</li>
+      <li>Transportation to work (car payment, gas, transit pass)</li>
+      <li>Minimum debt payments</li>
+      <li>Basic insurance (health, car, renters/homeowners)</li>
+    </ul>
+    <p>If your needs exceed 50% of income — which is common in high cost-of-living cities — you have two options: increase income, or find ways to reduce fixed costs (roommate, refinancing, cheaper transportation).</p>
+
+    <h2>The 30% Wants Category</h2>
+    <p>Wants are things you choose to spend on but could live without. They're not bad — they're what makes life enjoyable. The goal is to be intentional, not eliminate them entirely.</p>
+    <ul>
+      <li>Dining out and coffee shops</li>
+      <li>Streaming subscriptions and entertainment</li>
+      <li>Gym memberships and hobbies</li>
+      <li>Clothing beyond basics</li>
+      <li>Vacations and travel</li>
+      <li>Gifts and personal care upgrades</li>
+    </ul>
+    <p>If you're aggressively paying off debt, temporarily reducing this to 20% or even 15% and redirecting that money to debt can cut your payoff timeline dramatically.</p>
+
+    <h2>The 20% Savings & Debt Category</h2>
+    <p>This is the most powerful bucket. When you're debt-free, it builds wealth. When you're in debt, it's your escape hatch.</p>
+    <ul>
+      <li><strong>Priority 1:</strong> $1,000 emergency fund</li>
+      <li><strong>Priority 2:</strong> Pay off all high-interest debt (above 7% APR)</li>
+      <li><strong>Priority 3:</strong> Build 3–6 month emergency fund</li>
+      <li><strong>Priority 4:</strong> Retirement contributions (at least enough for employer match)</li>
+      <li><strong>Priority 5:</strong> Pay off low-interest debt and invest the rest</li>
+    </ul>
+
+    <h2>Does the 50/30/20 Rule Still Work in 2026?</h2>
+    <p>The rule has faced criticism as housing and food costs have risen significantly. In many cities, rent alone consumes 40–50% of take-home pay for average earners — leaving little room for the other categories.</p>
+    <p>The honest answer: the 50/30/20 rule is a <em>framework</em>, not a law. If your needs are genuinely 60%, adjust your wants to 20% and savings to 20%. The ratios matter less than the habit of allocating intentionally.</p>
+
+    <div class="ad-slot" style="margin: 32px 0;">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-ph"></div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-widget" style="text-align:center; padding:12px;">
+      <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#aaa; margin-bottom:8px;">Advertisement</div>
+      <div class="ad-ph rect" style="margin:0 auto;"></div>
+    </div>
+
+    <div class="sidebar-widget">
+      <div class="widget-title">Quick Tips</div>
+      <div class="tip-item"><strong>Audit subscriptions first</strong>The average American wastes $219/mo on unused subscriptions. Check yours now.</div>
+      <div class="tip-item"><strong>Automate savings day one</strong>Set up an auto-transfer on payday. Pay yourself before you can spend it.</div>
+      <div class="tip-item"><strong>Negotiate your bills</strong>Internet, insurance, and phone bills are all negotiable. One call can save $50+/mo.</div>
+      <div class="tip-item"><strong>Cook one extra meal/week</strong>The average restaurant meal costs 5× more than cooking at home.</div>
+    </div>
+
+    <div class="sidebar-widget">
+      <div class="widget-title">Related Guides</div>
+      <a class="related-link" href="/"><div class="related-link-icon">📋</div>7-Step Debt Payoff Plan</a>
+      <a class="related-link" href="/debt-snowball-calculator.html"><div class="related-link-icon">🧮</div>Debt Snowball Calculator</a>
+      <a class="related-link" href="/best-balance-transfer-cards.html"><div class="related-link-icon">💳</div>Best Balance Transfer Cards</a>
+    </div>
+
+    <div class="sidebar-widget" style="text-align:center; padding:12px; position:sticky; top:24px;">
+      <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#aaa; margin-bottom:8px;">Advertisement</div>
+      <div class="ad-ph rect" style="margin:0 auto;"></div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/privacy-policy.html">Privacy Policy</a><a href="#">About</a><a href="#">Contact</a>
+  </div>
+  <p>© 2026 The Debt-Free Blueprint · For informational purposes only</p>
+</footer>
+
+<script>
+  let period = 'monthly';
+
+  function setPeriod(p) {
+    period = p;
+    document.getElementById('btn-monthly').classList.toggle('active', p === 'monthly');
+    document.getElementById('btn-annual').classList.toggle('active', p === 'annual');
+    calcBudget();
+  }
+
+  function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+
+  function calcBudget() {
+    let val = parseFloat(document.getElementById('income').value);
+    if (!val || val <= 0) { document.getElementById('calc-output').style.display = 'none'; return; }
+    const monthly = period === 'annual' ? val / 12 : val;
+
+    const needs = monthly * 0.5, wants = monthly * 0.3, savings = monthly * 0.2;
+
+    document.getElementById('needs-amt').textContent = fmt(needs) + '/mo';
+    document.getElementById('wants-amt').textContent = fmt(wants) + '/mo';
+    document.getElementById('savings-amt').textContent = fmt(savings) + '/mo';
+    document.getElementById('leg-needs').textContent = fmt(needs);
+    document.getElementById('leg-wants').textContent = fmt(wants);
+    document.getElementById('leg-savings').textContent = fmt(savings);
+    document.getElementById('needs-lbl').textContent = fmt(needs);
+    document.getElementById('wants-lbl').textContent = fmt(wants);
+    document.getElementById('sav-lbl').textContent = fmt(savings);
+
+    const needsCats = [
+      ['🏠', 'Rent / Mortgage', 0.35],
+      ['🔌', 'Utilities & Internet', 0.07],
+      ['🛒', 'Groceries', 0.12],
+      ['🚗', 'Transportation', 0.10],
+      ['🏥', 'Insurance (Health, Auto)', 0.08],
+      ['💳', 'Minimum Debt Payments', 0.08],
+      ['📦', 'Other Essentials', 0.20],
+    ];
+    document.getElementById('needs-breakdown').innerHTML = needsCats.map(([icon, label, pct]) =>
+      `<div class="breakdown-item"><div class="breakdown-cat"><span class="breakdown-icon">${icon}</span>${label}</div><div class="breakdown-amount">${fmt(needs * pct)}</div></div>`
+    ).join('');
+
+    const wantsCats = [
+      ['🍕', 'Dining Out & Takeout', 0.30],
+      ['📺', 'Streaming & Entertainment', 0.10],
+      ['👗', 'Clothing & Shopping', 0.20],
+      ['🏋️', 'Gym & Hobbies', 0.15],
+      ['✈️', 'Travel & Vacations', 0.15],
+      ['🎁', 'Gifts & Personal Care', 0.10],
+    ];
+    document.getElementById('wants-breakdown').innerHTML = wantsCats.map(([icon, label, pct]) =>
+      `<div class="breakdown-item"><div class="breakdown-cat"><span class="breakdown-icon">${icon}</span>${label}</div><div class="breakdown-amount">${fmt(wants * pct)}</div></div>`
+    ).join('');
+
+    const savCats = [
+      ['🚨', 'Emergency Fund (priority)', 0.25],
+      ['💳', 'Extra Debt Payments', 0.50],
+      ['📈', 'Retirement (401k/IRA)', 0.15],
+      ['🏦', 'General Savings', 0.10],
+    ];
+    document.getElementById('sav-breakdown').innerHTML = savCats.map(([icon, label, pct]) =>
+      `<div class="breakdown-item"><div class="breakdown-cat"><span class="breakdown-icon">${icon}</span>${label}</div><div class="breakdown-amount">${fmt(savings * pct)}</div></div>`
+    ).join('');
+
+    document.getElementById('calc-output').style.display = 'block';
+  }
+</script>
+</body>
+</html>
