@@ -10,4 +10,7 @@
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
+  <url><loc>https://moneyrescue.github.io/debt-snowball-calculator.html</loc><priority>0.8</priority></url>
+<url><loc>https://moneyrescue.github.io/50-30-20-budget.html</loc><priority>0.8</priority></url>
+<url><loc>https://moneyrescue.github.io/best-balance-transfer-cards.html</loc><priority>0.8</priority></url>
 </urlset>
