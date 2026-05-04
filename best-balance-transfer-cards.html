@@ -96,8 +96,14 @@
     .pros li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-size: 0.8rem; }
     .cons li { padding: 2px 0 2px 16px; position: relative; }
     .cons li::before { content: '✗'; position: absolute; left: 0; color: #c0392b; font-size: 0.8rem; }
-    .card-ideal { font-size: 0.88rem; color: var(--ink-light); padding: 10px 14px; background: var(--paper-dark); border-radius: 4px; }
+    .card-ideal { font-size: 0.88rem; color: var(--ink-light); padding: 10px 14px; background: var(--paper-dark); border-radius: 4px; margin-bottom: 14px; }
     .card-ideal strong { color: var(--ink); }
+    .apply-btn { display: flex; align-items: center; justify-content: space-between; background: var(--green); color: #fff; border-radius: 6px; padding: 13px 18px; text-decoration: none; transition: background 0.2s; }
+    .apply-btn:hover { background: #165a30; }
+    .apply-btn-title { font-family: var(--serif); font-weight: 700; font-size: 0.95rem; display: block; }
+    .apply-btn-sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 2px; display: block; }
+    .apply-btn-arrow { font-size: 1.2rem; opacity: 0.8; }
+    .apply-note { font-size: 11px; color: var(--ink-lighter); text-align: center; margin-top: 6px; }
 
     /* COMPARISON TABLE */
     .compare-wrap { overflow-x: auto; margin: 28px 0; }
@@ -153,8 +159,6 @@
   <a href="/debt-snowball-calculator.html">Snowball Calculator</a>
   <a href="/50-30-20-budget.html">50/30/20 Budget</a>
   <a href="/best-balance-transfer-cards.html" class="active">Balance Transfer Cards</a>
-  <a href="/best-budgeting-apps.html">Budgeting Apps</a>
-  <a href="/products-sales-page.html">The Debt Freedom Blueprint</a>
 </nav>
 
 <div class="hero">
@@ -213,6 +217,11 @@
         <div class="cons"><div class="cons-title">Cons</div><ul><li>5% balance transfer fee</li><li>No rewards program</li><li>Requires good to excellent credit</li></ul></div>
       </div>
       <div class="card-ideal"><strong>Best for:</strong> Anyone with $5,000+ in credit card debt who wants maximum time to pay it off at 0% interest.</div>
+      <a class="apply-btn" href="https://www.wellsfargo.com/credit-cards/reflect/" target="_blank" rel="noopener">
+        <div><span class="apply-btn-title">Learn More at Wells Fargo →</span><span class="apply-btn-sub">Official site · Terms and conditions apply</span></div>
+        <span class="apply-btn-arrow">↗</span>
+      </a>
+      <div class="apply-note">No affiliate link — we link directly to the issuer. Replace with affiliate link when approved on CJ.com.</div>
     </div>
 
     <!-- CARD 2 -->
@@ -235,6 +244,11 @@
         <div class="cons"><div class="cons-title">Cons</div><ul><li>5% transfer fee (min $5)</li><li>No rewards or cash back</li><li>Balance must be transferred within 4 months</li></ul></div>
       </div>
       <div class="card-ideal"><strong>Best for:</strong> People who worry about missing a payment — no late fees is a valuable safety net.</div>
+      <a class="apply-btn" href="https://www.citi.com/credit-cards/citi-simplicity-credit-card" target="_blank" rel="noopener">
+        <div><span class="apply-btn-title">Learn More at Citi →</span><span class="apply-btn-sub">Official site · Terms and conditions apply</span></div>
+        <span class="apply-btn-arrow">↗</span>
+      </a>
+      <div class="apply-note">No affiliate link — we link directly to the issuer. Replace with affiliate link when approved on CJ.com.</div>
     </div>
 
     <div class="ad-slot" style="margin: 28px 0;">
@@ -262,6 +276,11 @@
         <div class="cons"><div class="cons-title">Cons</div><ul><li>Transfer fee rises to 5% after intro period</li><li>Not accepted everywhere vs. Visa/Mastercard</li><li>Shorter 0% window than top picks</li></ul></div>
       </div>
       <div class="card-ideal"><strong>Best for:</strong> Savers who want a lower transfer fee and don't mind a shorter 0% window.</div>
+      <a class="apply-btn" href="https://www.discover.com/credit-cards/balance-transfer/" target="_blank" rel="noopener">
+        <div><span class="apply-btn-title">Learn More at Discover →</span><span class="apply-btn-sub">Official site · Terms and conditions apply</span></div>
+        <span class="apply-btn-arrow">↗</span>
+      </a>
+      <div class="apply-note">No affiliate link — we link directly to the issuer. Replace with affiliate link when approved on CJ.com.</div>
     </div>
 
     <!-- CARD 4 -->
@@ -284,6 +303,11 @@
         <div class="cons"><div class="cons-title">Cons</div><ul><li>No rewards program</li><li>Must transfer within 60 days for intro rate</li></ul></div>
       </div>
       <div class="card-ideal"><strong>Best for:</strong> Balance transfer beginners who want a simple, no-frills card with a low fee.</div>
+      <a class="apply-btn" href="https://www.bankofamerica.com/credit-cards/products/bankamericard-credit-card/" target="_blank" rel="noopener">
+        <div><span class="apply-btn-title">Learn More at Bank of America →</span><span class="apply-btn-sub">Official site · Terms and conditions apply</span></div>
+        <span class="apply-btn-arrow">↗</span>
+      </a>
+      <div class="apply-note">No affiliate link — we link directly to the issuer. Replace with affiliate link when approved on CJ.com.</div>
     </div>
 
     <!-- COMPARISON TABLE -->
@@ -362,7 +386,7 @@
 
 <footer>
   <div class="footer-links">
-    <a href="/">Home</a><a href="/privacy-policy.html">Privacy Policy</a><a href="#">About</a><a href="#">Contact</a>
+    <a href="/">Home</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/about.html">About</a><a href="mailto:info@debt-freeblueprint.com">Contact</a>
   </div>
   <p>© 2026 The Debt-Free Blueprint · For informational purposes only · Not financial advice</p>
 </footer>
