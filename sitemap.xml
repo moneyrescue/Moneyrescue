@@ -6,6 +6,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://moneyrescue.github.io/about.html</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
     <loc>https://moneyrescue.github.io/privacy-policy.html</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
