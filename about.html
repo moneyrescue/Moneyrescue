@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — The Debt-Free Blueprint</title>
+  <meta name="description" content="The Debt-Free Blueprint is a personal finance site publishing free guides, calculators, and tools to help everyday Americans pay off debt and build real wealth."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://moneyrescue.github.io/about.html"/>
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2521820245358905" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a18; --ink-light: #4a4a44; --ink-lighter: #888;
+      --paper: #faf8f3; --paper-dark: #f0ede3; --paper-mid: #e8e4da;
+      --accent: #c8440a; --accent-light: #f4ece6;
+      --green: #1e6e3e; --green-light: #e8f4ee;
+      --gold: #b8860b; --gold-light: #fdf8e6;
+      --rule: #d8d4c8;
+      --serif: 'Playfair Display', Georgia, serif;
+      --body: 'Source Serif 4', Georgia, serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--body); background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.8; }
+
+    /* ── TOPBAR ── */
+    .topbar { background: var(--ink); color: rgba(255,255,255,0.6); text-align: center; padding: 8px 16px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .topbar span { color: #f0c060; font-weight: 600; }
+
+    /* ── HEADER ── */
+    header { border-bottom: 3px double var(--rule); padding: 24px; text-align: center; background: var(--paper); }
+    .site-name { font-family: var(--serif); font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; display: block; margin-bottom: 3px; }
+    .site-name:hover { color: var(--accent); }
+    .site-tagline { font-size: 12px; color: var(--ink-light); }
+
+    /* ── NAV ── */
+    nav { background: var(--paper-dark); border-bottom: 1px solid var(--rule); padding: 10px 24px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: var(--ink-light); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--accent); font-weight: 600; }
+    nav a.highlight { color: #f0a000; font-weight: 700; }
+
+    /* ── HERO ── */
+    .about-hero { background: var(--ink); color: #fff; padding: 72px 24px 80px; position: relative; overflow: hidden; }
+    .about-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(200,68,10,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(30,110,62,0.12) 0%, transparent 55%); }
+    .about-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 48px; background: linear-gradient(0deg, var(--paper) 0%, transparent 100%); }
+    .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .hero-label { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .hero-inner h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero-inner h1 em { font-style: italic; color: #f87171; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.65); max-width: 580px; line-height: 1.7; }
+
+    /* ── MAIN LAYOUT ── */
+    .main { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── MISSION STATEMENT ── */
+    .mission { padding: 56px 0 48px; border-bottom: 1px solid var(--rule); }
+    .mission-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+    .mission h2 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; margin-bottom: 20px; line-height: 1.2; }
+    .mission h2 em { font-style: italic; color: var(--accent); }
+    .mission-body { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    @media(max-width: 640px) { .mission-body { grid-template-columns: 1fr; } }
+    .mission p { font-size: 0.98rem; color: var(--ink-light); line-height: 1.8; margin-bottom: 1.2em; }
+    .mission p:last-child { margin-bottom: 0; }
+
+    /* ── WHAT WE BELIEVE ── */
+    .beliefs { padding: 56px 0 48px; border-bottom: 1px solid var(--rule); }
+    .beliefs-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 14px; }
+    .beliefs h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 900; margin-bottom: 32px; }
+    .belief-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    @media(max-width: 580px) { .belief-grid { grid-template-columns: 1fr; } }
+    .belief-card { background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 24px 26px; }
+    .bc-num { font-family: var(--serif); font-weight: 900; font-size: 2rem; color: var(--paper-mid); line-height: 1; margin-bottom: 10px; }
+    .bc-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .bc-body { font-size: 0.88rem; color: var(--ink-light); line-height: 1.65; }
+
+    /* ── BY THE NUMBERS ── */
+    .numbers { background: var(--ink); padding: 48px 24px; margin: 0 -24px; }
+    .numbers-inner { max-width: 900px; margin: 0 auto; }
+    .numbers-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 12px; text-align: center; }
+    .numbers h2 { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; color: #fff; text-align: center; margin-bottom: 36px; }
+    .numbers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    @media(max-width: 580px) { .numbers-grid { grid-template-columns: repeat(2, 1fr); } }
+    .num-item { text-align: center; padding: 20px 16px; border-right: 1px solid rgba(255,255,255,0.08); }
+    .num-item:last-child { border-right: none; }
+    .num-val { font-family: var(--serif); font-size: 2.2rem; font-weight: 900; color: #f0c060; display: block; line-height: 1; }
+    .num-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; }
+
+    /* ── WHAT WE OFFER ── */
+    .offers { padding: 56px 0 48px; border-bottom: 1px solid var(--rule); }
+    .offers-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+    .offers h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 900; margin-bottom: 32px; }
+    .offers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    @media(max-width: 580px) { .offers-grid { grid-template-columns: 1fr; } }
+    .offer-card { border-radius: 8px; padding: 22px 24px; text-decoration: none; color: var(--ink); border: 1px solid var(--rule); background: #fff; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+    .offer-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .offer-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .offer-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .offer-desc { font-size: 0.85rem; color: var(--ink-light); line-height: 1.55; }
+    .offer-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; margin-top: 8px; }
+    .tag-free { background: var(--green-light); color: var(--green); }
+    .tag-paid { background: var(--gold-light); color: var(--gold); }
+
+    /* ── EDITORIAL STANDARDS ── */
+    .standards { padding: 56px 0 48px; border-bottom: 1px solid var(--rule); }
+    .standards-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 14px; }
+    .standards h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 900; margin-bottom: 20px; }
+    .standards p { font-size: 0.98rem; color: var(--ink-light); line-height: 1.8; margin-bottom: 1.2em; }
+    .standard-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .standard-list li { display: flex; gap: 12px; align-items: start; font-size: 0.95rem; padding: 12px 16px; background: var(--green-light); border-radius: 6px; border-left: 3px solid var(--green); }
+    .sl-icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .sl-text strong { display: block; font-family: var(--serif); margin-bottom: 2px; }
+    .sl-text span { font-size: 0.88rem; color: var(--ink-light); }
+
+    /* ── DISCLOSURE ── */
+    .disclosure { padding: 48px 0; }
+    .disclosure-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 14px; }
+    .disclosure h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 900; margin-bottom: 16px; }
+    .disclosure-box { background: var(--gold-light); border: 1px solid #dcc870; border-radius: 6px; padding: 24px 28px; }
+    .disclosure-box p { font-size: 0.92rem; color: var(--ink); line-height: 1.75; margin-bottom: 1em; }
+    .disclosure-box p:last-child { margin-bottom: 0; }
+
+    /* ── CONTACT CTA ── */
+    .contact-cta { background: var(--green); color: #fff; border-radius: 8px; padding: 40px; text-align: center; margin: 48px 0; }
+    .contact-cta h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .contact-cta p { color: rgba(255,255,255,0.75); margin-bottom: 24px; font-size: 1rem; }
+    .contact-links { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .contact-link { display: inline-block; padding: 11px 24px; border-radius: 5px; font-family: var(--serif); font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; }
+    .contact-link.primary { background: #fff; color: var(--green); }
+    .contact-link.primary:hover { background: #f0fdf4; }
+    .contact-link.secondary { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+    .contact-link.secondary:hover { background: rgba(255,255,255,0.2); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 13px; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">📊 <span>Free tools + guides</span> to help you pay off debt faster</div>
+
+<header>
+  <a class="site-name" href="/">The Debt-Free Blueprint</a>
+  <div class="site-tagline">Evidence-based personal finance for real people</div>
+</header>
+
+<nav>
+  <a href="/">Debt Guide</a>
+  <a href="/debt-snowball-calculator.html">Snowball Calculator</a>
+  <a href="/50-30-20-budget.html">50/30/20 Budget</a>
+  <a href="/best-balance-transfer-cards.html">Balance Transfer Cards</a>
+  <a href="/best-budgeting-apps.html">Budgeting Apps</a>
+  <a href="/about.html" class="active">About</a>
+  <a href="/products.html" class="highlight">Get Out of Debt Faster →</a>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="hero-inner">
+    <div class="hero-label">About This Site</div>
+    <h1>We Built This Because<br>Most Financial Advice Is<br><em>Vague, Judgmental,<br>or Just Wrong.</em></h1>
+    <p class="hero-sub">The Debt-Free Blueprint exists for one reason: to give everyday Americans a clear, honest, actionable path out of debt — with no gimmicks, no shame, and no fluff.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- MISSION -->
+  <div class="mission">
+    <div class="mission-label">Our Mission</div>
+    <h2>Real Advice for <em>Real People</em><br>Dealing with Real Debt</h2>
+    <div class="mission-body">
+      <div>
+        <p>The average American carries over $103,000 in debt. Most personal finance content online is written for people who are already comfortable — people who have their basics covered and are optimizing at the margins.</p>
+        <p>We write for everyone else. For the person who got a medical bill they couldn't pay. For the person who graduated into a terrible job market with student loans. For the person who used credit cards to survive a rough patch and now can't seem to get ahead of the balance.</p>
+      </div>
+      <div>
+        <p>Debt isn't a character flaw. It's the expected outcome of a financial system that was designed — by very smart, very well-funded companies — to keep you borrowing. Understanding that changes everything.</p>
+        <p>Our goal is to give you the knowledge, tools, and frameworks to beat that system. Free guides, free calculators, and premium products that go deeper for people who want to go all the way.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE BELIEVE -->
+  <div class="beliefs">
+    <div class="beliefs-label">What We Believe</div>
+    <h2>The Principles Behind Everything We Publish</h2>
+    <div class="belief-grid">
+      <div class="belief-card">
+        <div class="bc-num">01</div>
+        <div class="bc-title">Clarity over complexity</div>
+        <div class="bc-body">Personal finance isn't complicated. It's been made to seem complicated by people who benefit from your confusion. We say what we mean in plain English, with real numbers and real examples.</div>
+      </div>
+      <div class="belief-card">
+        <div class="bc-num">02</div>
+        <div class="bc-title">Action over inspiration</div>
+        <div class="bc-body">Motivational content feels good but doesn't pay bills. Every guide we publish ends with specific, actionable steps you can take today — not vague encouragement to "believe in yourself."</div>
+      </div>
+      <div class="belief-card">
+        <div class="bc-num">03</div>
+        <div class="bc-title">Psychology matters as much as math</div>
+        <div class="bc-body">The mathematically optimal debt strategy is worthless if you can't stick to it. We always account for how real human brains actually work — not how financial textbooks assume they work.</div>
+      </div>
+      <div class="belief-card">
+        <div class="bc-num">04</div>
+        <div class="bc-title">No shame, no judgment</div>
+        <div class="bc-body">Debt happens. To smart people, hardworking people, people who did everything right and still got hit with a job loss or medical bill. Shame is the enemy of progress. We leave it at the door.</div>
+      </div>
+      <div class="belief-card">
+        <div class="bc-num">05</div>
+        <div class="bc-title">Free tools should be genuinely free</div>
+        <div class="bc-body">Our calculators, guides, and frameworks are free with no email required, no paywalls, no teaser content. We believe everyone deserves access to good financial information regardless of their budget.</div>
+      </div>
+      <div class="belief-card">
+        <div class="bc-num">06</div>
+        <div class="bc-title">The goal is permanent freedom</div>
+        <div class="bc-body">Paying off debt is just the beginning. Our Master Course takes you all the way through — from your first debt payment to building real wealth after you hit zero. The goal is never going back.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers">
+    <div class="numbers-inner">
+      <div class="numbers-label">The Debt Problem in America</div>
+      <h2>Why This Site Exists</h2>
+      <div class="numbers-grid">
+        <div class="num-item"><span class="num-val">$103K</span><div class="num-label">Avg household debt</div></div>
+        <div class="num-item"><span class="num-val">77%</span><div class="num-label">Americans carry debt</div></div>
+        <div class="num-item"><span class="num-val">$240B</span><div class="num-label">Credit card interest paid annually</div></div>
+        <div class="num-item"><span class="num-val">22%</span><div class="num-label">Avg credit card APR</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE OFFER -->
+  <div class="offers">
+    <div class="offers-label">What's On This Site</div>
+    <h2>Free Tools, Free Guides, and Premium Products</h2>
+    <div class="offers-grid">
+      <a class="offer-card" href="/">
+        <div class="offer-icon">📋</div>
+        <div class="offer-title">7-Step Debt Payoff Guide</div>
+        <div class="offer-desc">Our most comprehensive free guide — the complete framework for paying off any debt in 3–5 years.</div>
+        <span class="offer-tag tag-free">Free</span>
+      </a>
+      <a class="offer-card" href="/debt-snowball-calculator.html">
+        <div class="offer-icon">🧮</div>
+        <div class="offer-title">Debt Snowball Calculator</div>
+        <div class="offer-desc">Enter your debts and get a month-by-month payoff schedule with your exact debt-free date.</div>
+        <span class="offer-tag tag-free">Free</span>
+      </a>
+      <a class="offer-card" href="/50-30-20-budget.html">
+        <div class="offer-icon">💰</div>
+        <div class="offer-title">50/30/20 Budget Calculator</div>
+        <div class="offer-desc">Enter your income and see exactly how to split your money — with a visual breakdown of every category.</div>
+        <span class="offer-tag tag-free">Free</span>
+      </a>
+      <a class="offer-card" href="/best-balance-transfer-cards.html">
+        <div class="offer-icon">💳</div>
+        <div class="offer-title">Best Balance Transfer Cards</div>
+        <div class="offer-desc">Top 0% APR offers ranked and compared — find the right card to cut your interest to zero.</div>
+        <span class="offer-tag tag-free">Free</span>
+      </a>
+      <a class="offer-card" href="/best-budgeting-apps.html">
+        <div class="offer-icon">📱</div>
+        <div class="offer-title">Best Budgeting Apps</div>
+        <div class="offer-desc">Honest rankings of every major budgeting app — free and paid options reviewed side by side.</div>
+        <span class="offer-tag tag-free">Free</span>
+      </a>
+      <a class="offer-card" href="/products.html">
+        <div class="offer-icon">🎓</div>
+        <div class="offer-title">The Debt Freedom Blueprint</div>
+        <div class="offer-desc">Our premium product suite — from a $9.99 quickstart guide to the comprehensive $97 Master Course.</div>
+        <span class="offer-tag tag-paid">From $9.99</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- EDITORIAL STANDARDS -->
+  <div class="standards">
+    <div class="standards-label">Editorial Standards</div>
+    <h2>How We Research and Write</h2>
+    <p>Every guide on this site is written to be accurate, actionable, and honest — including when the honest answer is "it depends" or "we don't know." Here's how we approach our content:</p>
+    <ul class="standard-list">
+      <li>
+        <div class="sl-icon">🔍</div>
+        <div class="sl-text">
+          <strong>Research-backed claims</strong>
+          <span>We cite behavioral economics research, Federal Reserve data, and peer-reviewed studies where we make specific claims. If we can't back it up, we don't say it.</span>
+        </div>
+      </li>
+      <li>
+        <div class="sl-icon">🔄</div>
+        <div class="sl-text">
+          <strong>Regularly updated</strong>
+          <span>Interest rates, credit card offers, and financial regulations change. We review and update our guides regularly — you'll see the "Updated" date on every article.</span>
+        </div>
+      </li>
+      <li>
+        <div class="sl-icon">💬</div>
+        <div class="sl-text">
+          <strong>Plain English only</strong>
+          <span>No unnecessary jargon. If we use a financial term, we explain it immediately in plain language. You shouldn't need a finance degree to understand our content.</span>
+        </div>
+      </li>
+      <li>
+        <div class="sl-icon">⚖️</div>
+        <div class="sl-text">
+          <strong>Balanced recommendations</strong>
+          <span>We present multiple approaches and explain the tradeoffs honestly. We don't push one strategy as universally correct — because it isn't. The best approach depends on your situation.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- DISCLOSURE -->
+  <div class="disclosure">
+    <div class="disclosure-label">Transparency</div>
+    <h2>How This Site Makes Money</h2>
+    <div class="disclosure-box">
+      <p><strong>Advertising:</strong> This site displays ads through Google AdSense. Advertisers do not influence our content, rankings, or recommendations. We do not accept payment to feature specific products or services in our editorial content.</p>
+      <p><strong>Affiliate links:</strong> Some links on this site — particularly on our budgeting app and balance transfer card pages — are affiliate links. If you sign up or purchase through these links, we may earn a commission at no cost to you. This never influences our rankings or reviews. We only recommend products we genuinely believe provide value.</p>
+      <p><strong>Digital products:</strong> We sell our own digital products — the Debt Freedom Blueprint product suite. Revenue from these products helps us keep our free content and tools available at no cost.</p>
+      <p><strong>Not financial advice:</strong> The content on this site is for informational and educational purposes only. It is not financial, legal, or tax advice. Always consult a licensed professional before making significant financial decisions.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT CTA -->
+  <div class="contact-cta">
+    <h2>Get in Touch</h2>
+    <p>Questions about our content, products, or partnership opportunities? We'd love to hear from you.</p>
+    <div class="contact-links">
+      <a class="contact-link primary" href="mailto:hello@moneyrescue.github.io">Email Us</a>
+      <a class="contact-link secondary" href="/products.html">View Our Products</a>
+      <a class="contact-link secondary" href="/">Back to Home</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/products.html">Products</a>
+    <a href="#">Contact</a>
+  </div>
+  <p>© 2026 The Debt-Free Blueprint · moneyrescue.github.io · For informational purposes only · Not financial advice</p>
+</footer>
+
+</body>
+</html>
