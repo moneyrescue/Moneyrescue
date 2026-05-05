@@ -134,7 +134,14 @@
     .content-section ul { margin: 10px 0 16px 0; list-style: none; }
     .content-section li { padding: 5px 0 5px 22px; position: relative; font-size: 0.95rem; }
     .content-section li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
-
+    /* ── PRODUCT CTA BANNER ── */
+    .product-banner { background: var(--ink); color: #fff; border-radius: 8px; padding: 28px 32px; margin: 40px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .pb-left { }
+    .pb-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
+    .pb-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .pb-sub { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    .pb-btn { background: #f0a000; color: #fff; font-family: var(--serif); font-weight: 700; font-size: 0.9rem; padding: 12px 22px; border-radius: 5px; text-decoration: none; white-space: nowrap; transition: background 0.2s; flex-shrink: 0; }
+    .pb-btn:hover { background: #c87800; }
     /* RELATED */
     .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0 60px; }
     .related-card { background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 20px; text-decoration: none; color: var(--ink); transition: box-shadow 0.2s, transform 0.2s; }
