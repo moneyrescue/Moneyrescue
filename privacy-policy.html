@@ -325,6 +325,28 @@
       h1 { font-size: 1.6rem; }
       .toc ol { columns: 1; }
     }
+/* Better TOC & general readability */
+ul {
+  line-height: 2.0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+  ul {
+    line-height: 2.2;
+    padding-left: 10px;
+  }
+}
+    
   </style>
 </head>
 <body>
@@ -333,9 +355,30 @@
 <div class="topbar">Legal &nbsp;·&nbsp; Privacy Policy</div>
 
 <!-- HEADER -->
-<header>
-  <a class="site-name" href="/">The Debt-Free Blueprint</a>
-  <div class="site-tagline">Evidence-based personal finance for real people</div>
+<header style="border-bottom:3px double #d8d4c8; padding:20px 32px; background:#faf8f3; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+ 
+  <!-- SVG LOGO — inline, links to homepage -->
+  <a href="/" style="text-decoration:none; display:flex; align-items:center; gap:14px;">
+ 
+    <!-- Shield mark -->
+    <svg width="54" height="64" viewBox="0 0 60 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Debt-Free Blueprint logo mark">
+      <path d="M30 0 L56 9 L56 44 Q56 62 30 72 Q4 62 4 44 L4 9 Z" fill="#0a1f45"/>
+      <path d="M30 8 L50 15 L50 43 Q50 58 30 66 Q10 58 10 43 L10 15 Z" fill="#1a4e8a"/>
+      <polyline points="19,53 19,34 30,24 41,34 41,53" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="19,53 30,43 41,53" fill="none" stroke="#1e6e3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="30" cy="24" r="4" fill="#4ade80"/>
+    </svg>
+ 
+    <!-- Text lockup -->
+    <div>
+      <div style="font-family:'Playfair Display',Georgia,serif; font-size:1.25rem; font-weight:700; color:#0a1f45; letter-spacing:-0.2px; line-height:1.2;">The Debt-Free Blueprint</div>
+      <div style="font-family:'Playfair Display',Georgia,serif; font-size:11px; font-style:italic; color:#1e6e3e; letter-spacing:0.14em; margin-top:3px;">Evidence-based personal finance</div>
+    </div>
+ 
+  </a>
+ 
+  <!-- Header CTA — desktop only -->
+  
 </header>
 
 <!-- BREADCRUMB -->
@@ -357,21 +400,22 @@
 
 <!-- TABLE OF CONTENTS -->
 <div class="toc" style="max-width:760px; margin: 0 auto 48px; padding: 24px 28px;">
-  <div class="toc-title">Contents</div>
-  <ol>
-    
-    <li> <a href="#information"> Information We Collect</a></li>
-    <li> <a href="#cookies"> Cookies & Tracking</a></li>
-    <li> <a href="#adsense"> Google AdSense</a></li>
-    <li> <a href="#analytics"> Google Analytics</a></li>
-    <li> <a href="#third-party"> Third-Party Links</a></li>
-    <li> <a href="#data-use"> How We Use Your Data</a></li>
-    <li> <a href="#your-rights"> Your Rights</a></li>
-    <li> <a href="#children"> Children's Privacy</a></li>
-    <li> <a href="#changes"> Policy Changes</a></li>
-    <li> <a href="#contact"> Contact Us</a></li>
-  </ol>
-</div>
+  <div class="toc-title"><h2>Contents</h2></div>
+
+<ul style="line-height: 2.1; padding-left: 20px; font-size: 1.05rem;">
+  <li><a href="#information">1. Information We Collect</a></li>
+  <li><a href="#cookies">2. Cookies & Tracking</a></li>
+  <li><a href="#adsense">3. Google AdSense</a></li>
+  <li><a href="#analytics">4. Google Analytics</a></li>
+  <li><a href="#third-party">5. Third-Party Links</a></li>
+  <li><a href="#data-use">6. How We Use Your Data</a></li>
+  <li><a href="#your-rights">7. Your Rights</a></li>
+  <li><a href="#children">8. Children's Privacy</a></li>
+  <li><a href="#changes">9. Policy Changes</a></li>
+  <li><a href="#contact">10. Contact Us</a></li>
+</ul>
+
+<hr style="margin: 40px 0;">
 
 <!-- CONTENT -->
 <div class="content">
@@ -551,15 +595,80 @@
 </div>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/privacy-policy.html">Privacy Policy</a>
-    <a href="/about.html">About</a>
-    <a href="mailto:info@debt-freeblueprint.com">Contact</a>
-    <a href="#">Disclaimer</a>
+<footer style="background:#0a1f45; color:rgba(255,255,255,0.5); padding:48px 32px 32px; margin-top:80px;">
+  <div style="max-width:1080px; margin:0 auto;">
+ 
+    <!-- Footer top: logo + nav columns -->
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; flex-wrap:wrap;">
+ 
+      <!-- Brand column -->
+      <div style="grid-column:span 1;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+          <svg width="32" height="38" viewBox="0 0 60 72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 0 L56 9 L56 44 Q56 62 30 72 Q4 62 4 44 L4 9 Z" fill="#1a4e8a"/>
+            <path d="M30 8 L50 15 L50 43 Q50 58 30 66 Q10 58 10 43 L10 15 Z" fill="#2060aa"/>
+            <polyline points="19,53 19,34 30,24 41,34 41,53" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="30" cy="24" r="4" fill="#4ade80"/>
+          </svg>
+          <div style="font-family:'Playfair Display',Georgia,serif; font-size:1rem; font-weight:700; color:#fff;">The Debt-Free Blueprint</div>
+        </div>
+        <p style="font-size:13px; line-height:1.7; color:rgba(255,255,255,0.45); margin-bottom:14px;">Evidence-based personal finance guides for Americans working to eliminate debt.</p>
+        <a href="mailto:info@debt-freeblueprint.com" style="font-size:12px; color:#4ade80; text-decoration:none;">info@debt-freeblueprint.com</a>
+      </div>
+ 
+      <!-- Free Tools column -->
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:14px;">Free Tools</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <a href="/" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">7-Step Debt Guide</a>
+          <a href="/debt-snowball-calculator.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Snowball Calculator</a>
+          <a href="/50-30-20-budget.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">50/30/20 Budget</a>
+          <a href="/how-to-build-credit.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Build Credit</a>
+        </div>
+      </div>
+ 
+      <!-- Guides column -->
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:14px;">Guides</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <a href="/best-balance-transfer-cards.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Balance Transfer Cards</a>
+          <a href="/best-budgeting-apps.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Best Budgeting Apps</a>
+          <a href="/how-to-negotiate-credit-card-debt.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Negotiate Debt</a>
+          <a href="/best-high-yield-savings-accounts.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">High Yield Savings</a>
+          <a href="/how-long-to-pay-off-debt.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Payoff Timelines</a>
+        </div>
+      </div>
+ 
+      <!-- Products column -->
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:14px;">Products</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <a href="/products.html" style="font-size:13px; color:#f0c060; font-weight:700; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#f0c060'">View All Products →</a>
+          <a href="/quickstart-sales.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Quickstart Guide</a>
+          <a href="/starter-kit-sales.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Starter Kit</a>
+          <a href="/master-course-sales.html" style="font-size:13px; color:rgba(255,255,255,0.6); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Master Course</a>
+        </div>
+        <div style="margin-top:20px; padding:14px; background:rgba(255,255,255,0.05); border-radius:6px; border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:4px;">Site of The</div>
+          <div style="font-family:'Playfair Display',Georgia,serif; font-size:13px; color:#fff; font-weight:700;">Debt-Free Blueprint</div>
+          <div style="font-size:11px; color:#4ade80; margin-top:2px;">debt-freeblueprint.com</div>
+        </div>
+      </div>
+ 
+    </div>
+ 
+    <!-- Footer bottom bar -->
+    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <p style="font-size:12px; color:rgba(255,255,255,0.3); margin:0;">© 2026 The Debt-Free Blueprint · debt-freeblueprint.com · For informational purposes only · Not financial advice</p>
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+        <a href="/about.html" style="font-size:12px; color:rgba(255,255,255,0.4); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">About</a>
+        <a href="/privacy-policy.html" style="font-size:12px; color:rgba(255,255,255,0.4); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Privacy Policy</a>
+        <a href="/about.html#disclosure" style="font-size:12px; color:rgba(255,255,255,0.4); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Disclosure</a>
+        <a href="mailto:info@debt-freeblueprint.com" style="font-size:12px; color:rgba(255,255,255,0.4); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Contact</a>
+      </div>
+    </div>
+ 
   </div>
-  <p>© 2026 The Debt-Free Blueprint. For informational purposes only — not financial advice.</p>
 </footer>
 
 </body>
